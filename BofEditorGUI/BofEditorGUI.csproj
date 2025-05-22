@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>AnyCPU;x64</Platforms>
+  
+    <TieredCompilation>true</TieredCompilation>
+    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+    <TieredCompilationQuickJitForLoops>false</TieredCompilationQuickJitForLoops>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BofEditor\BofEditor.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BinaryObjectFormat">
+      <HintPath>D:\Libraries\.NET Core\BinaryObjectFormat\v1.2.2\dlls\64BitRel\BinaryObjectFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="CustomDialogs">
+      <HintPath>D:\Libraries\.NET Core\CustomDialogs\v1.1.0\dlls\64BitRel\CustomDialogs.dll</HintPath>
+    </Reference>
+    <Reference Include="FastBinaryIO">
+      <HintPath>D:\Libraries\.NET Core\FastBinaryIO\v1.0.0\dlls\64BitRel\FastBinaryIO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
